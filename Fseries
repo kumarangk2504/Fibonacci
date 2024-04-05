@@ -1,0 +1,11 @@
+def fibonacci(n):
+    fib_sequence = [0, 1]  # Initialize Fibonacci sequence with first two numbers
+    
+    while len(fib_sequence) < n:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])  # Add the sum of last two numbers to the sequence
+    
+    return fib_sequence[:n]  # Return the Fibonacci sequence up to the specified length
+
+if __name__ == "__main__":
+    num = int(input("Enter the number of Fibonacci numbers to generate: "))
+    print("Fibonacci sequence up to", num, "numbers:", fibonacci(num))
